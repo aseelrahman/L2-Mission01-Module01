@@ -20,3 +20,21 @@ const numArr: number[] = [1, 2, 3];
 const dhakaLatLong: readonly [number, number] = [23.8103, 90.4125];
 
 // dhakaLatLong[0] = 123213;  //cannot assign
+
+// Optional, Default and rest parameters (...args)
+
+const concatName = (firstName: string, lastName?: string) => {
+  if (!lastName) {
+    return firstName;
+  }
+
+  return firstName + " " + lastName;
+};
+
+console.log(concatName("Aseel", "Rahman"));
+
+const greetings = (fullName: string, greeting = "Hello"): void => {
+  console.log(greeting + " " + fullName);
+};
+
+greetings("Aseel");
