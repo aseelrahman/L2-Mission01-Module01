@@ -38,3 +38,18 @@ const greetings = (fullName: string, greeting = "Hello"): void => {
 };
 
 greetings("Aseel");
+
+const sum = (...numbers: number[]) => {
+  return numbers.reduce((total, sum) => total + sum, 0);
+};
+
+sum(1, 2, 4, 5, 6);
+
+const logUserAction = (
+  ...args: [name: string, age: number, isActive: boolean]
+) => {
+  const [name, age] = args;
+  console.log(name + " is " + age);
+};
+
+logUserAction("Aseel", 23, false);
